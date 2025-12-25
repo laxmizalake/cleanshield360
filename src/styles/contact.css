@@ -1,0 +1,156 @@
+/* ================================
+   Contact Section Styling
+================================ */
+.contact-container {
+  padding: clamp(40px, 6vw, 70px) clamp(16px, 5vw, 20px);
+  background: #f7fcfd;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(24px, 4vw, 40px);
+  background: white;
+  padding: clamp(28px, 5vw, 50px);
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e7f4f4;
+}
+
+/* ================================
+   LEFT FORM
+================================ */
+.contact-form h2 {
+  font-size: clamp(26px, 4vw, 32px);
+  color: #063c4f;
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  color: #4f6969;
+  margin-bottom: 25px;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: clamp(12px, 2.5vw, 14px);
+  border: 1.5px solid #cfe7e7;
+  border-radius: 10px;
+  font-size: clamp(14px, 2vw, 15px);
+  outline: none;
+  transition: 0.3s;
+  background: #fdfefe;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #8aa6a6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0b7585;
+  box-shadow: 0px 0px 8px rgba(11, 118, 133, 0.3);
+}
+
+/* ================================
+   BUTTON
+================================ */
+.btn-contact {
+  width: 100%;
+  padding: clamp(12px, 2.5vw, 14px);
+  border: none;
+  font-size: clamp(14px, 2vw, 16px);
+  border-radius: 10px;
+  cursor: pointer;
+  background: #0a7080;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  background: #095b69;
+  box-shadow: 0px 0px 12px rgba(9, 91, 105, 0.4);
+}
+
+/* ================================
+   RIGHT INFO PANEL
+================================ */
+.contact-info {
+  background: #f0fafc;
+  border-left: 4px solid #0a7080;
+  padding: clamp(22px, 4vw, 30px) clamp(18px, 4vw, 25px);
+  border-radius: 14px;
+}
+
+.contact-info h3 {
+  font-size: clamp(20px, 3vw, 24px);
+  color: #063c4f;
+  margin-bottom: 25px;
+}
+
+.info-item {
+  margin-bottom: 20px;
+}
+
+.info-title {
+  font-weight: 600;
+  color: #0a7080;
+  font-size: clamp(14px, 2vw, 15px);
+}
+
+.info-item p {
+  color: #445e5e;
+  margin-left: 5px;
+  font-size: clamp(14px, 2vw, 15px);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: clamp(24px, 5vw, 35px);
+  }
+
+  .contact-info {
+    border-left: none;
+    border-top: 4px solid #0a7080;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-wrapper {
+    padding: 22px;
+  }
+
+  .btn-contact {
+    border-radius: 8px;
+  }
+}
+
+/* ================================
+   FADE ANIMATION
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

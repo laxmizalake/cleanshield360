@@ -1,0 +1,169 @@
+/* ===========================
+   HERO CONTAINER
+=========================== */
+.hero {
+  background: linear-gradient(
+    180deg,
+    var(--dark-teal) 0%,
+    rgba(1, 51, 59, 0.95) 100%
+  );
+  color: #d8f6f4;
+  border-radius: 10px;
+  padding: clamp(28px, 5vw, 48px);
+  display: flex;
+  gap: clamp(18px, 4vw, 28px);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 42px;
+  box-shadow: 0 10px 20px rgba(3, 21, 22, 0.06);
+  flex-wrap: wrap;
+
+  /* Subtle entrance animation */
+  animation: heroFadeUp 0.8s ease-out both;
+}
+
+/* ===========================
+   HERO ANIMATION
+=========================== */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+.hero-left {
+  flex: 1 1 320px;
+}
+
+.hero h2 {
+  margin: 0 0 18px 0;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.08;
+  font-weight: 800;
+  color: #9ee3df;
+}
+
+.hero p.lead {
+  margin: 0 0 20px 0;
+  color: #aee6e3;
+  max-width: 420px;
+  font-weight: 500;
+  font-size: clamp(14px, 2.2vw, 16px);
+}
+
+/* CTA */
+.hero .cta {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero .cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 138, 43, 0.35);
+}
+
+/* ===========================
+   RIGHT SIDE (PARALLAX)
+=========================== */
+.hero-right {
+  width: clamp(220px, 30vw, 320px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 900px;
+}
+
+/* Floating container */
+.shield-wrap {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 18px;
+  padding: clamp(14px, 3vw, 18px);
+  box-shadow: 0 8px 20px rgba(2, 22, 25, 0.14);
+
+  /* Parallax motion */
+  animation: floatParallax 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+/* Hover depth */
+.hero-right:hover .shield-wrap {
+  transform: translateY(-6px) rotateX(6deg) rotateY(-6deg);
+}
+
+/* ===========================
+   PARALLAX ANIMATION
+=========================== */
+@keyframes floatParallax {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Illustration */
+.illustration {
+  width: clamp(160px, 28vw, 220px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero p.lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    border-radius: 8px;
+  }
+
+  .hero .cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+=========================== */
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .shield-wrap {
+    animation: none;
+    transform: none;
+  }
+}

@@ -1,0 +1,132 @@
+.admin-contacts {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER */
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.contacts-header h2 {
+  color: #0c484f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* EXPORT */
+.export-btn {
+  background: linear-gradient(135deg, #0c484f, #1a7f87);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(12, 72, 79, 0.3);
+}
+
+/* TABLE */
+.contact-table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+thead {
+  background: #e7f3f3;
+}
+
+th {
+  padding: 12px;
+  font-size: 13px;
+  color: #0c484f;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  font-size: 13px;
+  border-top: 1px solid #eef3f3;
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background: #f9fcfc;
+}
+
+/* MESSAGE */
+.message-cell {
+  max-width: 260px;
+  white-space: pre-wrap;
+  color: #444;
+}
+
+/* STATUS SELECT */
+.status-select {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.status-select.pending {
+  background: rgba(255, 183, 3, 0.2);
+  color: #9a6b00;
+}
+
+.status-select.resolved {
+  background: rgba(42, 157, 143, 0.2);
+  color: #1f7a6d;
+}
+
+/* DELETE */
+.delete-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+
+/* STATES */
+.state-text {
+  text-align: center;
+  padding: 30px;
+  color: #6b8b8f;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contacts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

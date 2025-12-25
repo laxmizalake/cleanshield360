@@ -1,0 +1,24 @@
+.admin-resumes {
+  padding: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #0a9396;
+  color: white;
+}
+
+a {
+  color: #005f73;
+  font-weight: 600;
+}

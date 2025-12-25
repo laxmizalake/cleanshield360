@@ -1,0 +1,150 @@
+/* ================= SECTION WRAPPER ================= */
+.lower-section-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: clamp(26px, 4vw, 44px) 0 12px;
+  background: linear-gradient(
+    180deg,
+    #eef5f4 0%,
+    #f6f5f2 40%
+  ); /* visual link with hero */
+}
+
+/* ================= INNER CONTAINER ================= */
+.lower-services {
+  width: 100%;
+  max-width: 1280px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(22px, 3vw, 38px) clamp(22px, 4vw, 46px);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  gap: clamp(22px, 4vw, 40px);
+
+  /* scroll animation */
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* ================= LEFT TEXT ================= */
+.lower-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.lower-left h3 {
+  margin: 0;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  color: #0c484f;
+  line-height: 1.2;
+}
+
+.lower-left p {
+  font-size: clamp(14px, 2vw, 16px);
+  color: #355b60;
+  margin-top: 10px;
+  max-width: 520px;
+}
+
+/* ================= RIGHT IMAGE CARD ================= */
+.lower-right {
+  flex: 0 0 auto;
+  background: linear-gradient(
+    160deg,
+    #e1f2f2,
+    #d8ecec
+  );
+  padding: clamp(18px, 3vw, 26px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Van Image */
+.van {
+  width: clamp(170px, 20vw, 220px);
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+/* ================= MICRO HOVER ANIMATION ================= */
+.lower-services:hover .lower-right {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.lower-services:hover .van {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ================= SCROLL FADE-IN ================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .lower-services {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .lower-services {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px;
+  }
+
+  .lower-left p {
+    max-width: 100%;
+  }
+
+  .lower-right {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .lower-services {
+    padding: 22px 18px;
+    border-radius: 16px;
+    gap: 20px;
+  }
+
+  .lower-left h3 {
+    font-size: 21px;
+  }
+
+  .lower-left p {
+    font-size: 14px;
+  }
+
+  .lower-right {
+    padding: 18px;
+  }
+
+  .van {
+    width: 160px;
+  }
+}

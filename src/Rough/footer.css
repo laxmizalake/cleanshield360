@@ -1,0 +1,28 @@
+/* OUTER FOOTER BACKGROUND (matches site background) */
+.footer-wrapper {
+  width: 100%;
+  background: #f6f5f2;       /* same as your page background */
+  padding: 8px 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* FOOTER CONTENT BOX like sections */
+.footer-box {
+  width: 100%;
+  max-width: 960px;         /* same width as your Services section */
+  background: #ffffff;
+  padding: 22px 0;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/* FOOTER TEXT */
+.footer-box p {
+  margin: 0;
+  color: #577a7d;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}

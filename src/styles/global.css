@@ -1,0 +1,27 @@
+:root{
+  --dark-teal: #01333b;
+  --teal: #0b5f63;
+  --light-teal: #d7efee;
+  --cream: #f6f1eb;
+  --muted: #4f6b6e;
+  --orange: #ff8a2b;
+  --card-radius: 14px;
+  --max-width: 1000px;
+  --pad: 28px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(#f8f6f4,#f5f2ee);
+  color: #08323a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.app main{
+  max-width: var(--max-width);
+  margin: 30px auto;
+  padding: 0 20px;
+}

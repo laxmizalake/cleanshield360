@@ -1,0 +1,161 @@
+.cleaning-container {
+  padding: clamp(28px, 6vw, 48px) clamp(16px, 8vw, 8%);
+  background: var(--page-bg, #f7f9fc);
+  font-family: "Poppins", sans-serif;
+  animation: fadeUp 0.6s ease;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.cleaning-hero {
+  text-align: center;
+  padding: clamp(36px, 6vw, 56px) 18px;
+  background: linear-gradient(135deg, #062c3d, #031d28 60%);
+  color: #ffffff;
+  border-radius: 26px;
+  margin-bottom: clamp(36px, 6vw, 56px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cleaning-hero h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cleaning-hero p {
+  font-size: clamp(15px, 2vw, 18px);
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ---------------- SECTION TITLES ---------------- */
+.section-title {
+  font-size: clamp(24px, 3.5vw, 32px);
+  margin-bottom: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--dark-teal, #062c3d);
+}
+
+/* ---------------- GRID LAYOUT ---------------- */
+.service-grid,
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(18px, 3vw, 26px);
+  margin-top: 30px;
+}
+
+/* ---------------- SERVICE CARDS ---------------- */
+.service-card {
+  background: #ffffff;
+  padding: clamp(22px, 3vw, 28px);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h3 {
+  margin-top: 14px;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 600;
+  color: var(--dark-teal, #062c3d);
+}
+
+.service-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.service-card li {
+  font-size: clamp(14px, 1.8vw, 15px);
+  margin-bottom: 6px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ---------------- ICONS ---------------- */
+.service-icon {
+  font-size: clamp(38px, 5vw, 46px);
+  color: var(--orange, #ff8c2a);
+}
+
+/* ---------------- BUTTONS ---------------- */
+.btn-service {
+  margin-top: 16px;
+  padding: 11px 22px;
+  background: var(--orange, #ff8c2a);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: clamp(14px, 1.8vw, 15px);
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.btn-service:hover {
+  background: #ff952b;
+  transform: translateY(-2px);
+}
+
+/* ---------------- FEATURES ---------------- */
+.feature-card {
+  background: #ffffff;
+  padding: clamp(18px, 3vw, 22px);
+  border-radius: 18px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .cleaning-container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cleaning-hero {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-service {
+    width: 100%;
+  }
+
+  .service-card,
+  .feature-card {
+    border-radius: 16px;
+  }
+}

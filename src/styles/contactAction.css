@@ -1,0 +1,72 @@
+/* ================= PROFESSIONAL FLOATING ACTION ================= */
+
+.contact-action {
+  position: fixed;
+  right: 24px;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+/* COMMON STYLE */
+.contact-action a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* CONTACT BUTTON (TEXT) */
+.contact-btn {
+  background: #ffffff;
+  color: #0c484f;
+  border: 1px solid #e3e8e8;
+  padding: 0 16px;
+}
+
+.contact-btn:hover {
+  background: #f5f8f8;
+  border-color: #0c484f;
+}
+
+/* CALL BUTTON (ICON ONLY) */
+.call-btn {
+  width: 42px;
+  background: #0c484f;
+  color: #ffffff;
+  border: 1px solid #0c484f;
+}
+
+.call-btn:hover {
+  background: #08373c;
+}
+
+/* ICON SIZE */
+.call-btn svg {
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-action {
+    right: 16px;
+    bottom: 70px;
+  }
+
+  .contact-action a {
+    height: 40px;
+  }
+
+  .contact-btn {
+    font-size: 12px;
+    padding: 0 14px;
+  }
+}

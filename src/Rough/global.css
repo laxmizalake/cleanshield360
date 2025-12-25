@@ -1,0 +1,150 @@
+:root{
+  /* ===============================
+     COLOR SYSTEM – LIGHT MODE
+  =============================== */
+  --dark-teal: #01333b;
+  --teal: #0b5f63;
+  --light-teal: #d7efee;
+  --cream: #f6f1eb;
+  --muted: #4f6b6e;
+  --orange: #ff8a2b;
+
+  --bg-main: linear-gradient(#f8f6f4,#f5f2ee);
+  --bg-card: #ffffff;
+  --text-main: #08323a;
+  --shadow-soft: 0 6px 20px rgba(0,0,0,0.06);
+
+  /* ===============================
+     LAYOUT TOKENS
+  =============================== */
+  --card-radius: 14px;
+  --max-width: 1000px;
+  --pad: clamp(18px, 3vw, 28px);
+
+  /* ===============================
+     TYPOGRAPHY
+  =============================== */
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+}
+
+/* ===============================
+   DARK MODE VARIABLES
+   (Enable by adding: data-theme="dark" on body)
+================================ */
+body[data-theme="dark"] {
+  --bg-main: linear-gradient(#0b1f24,#06161a);
+  --bg-card: #0f2a30;
+  --text-main: #e3f4f3;
+  --muted: #9bbcbc;
+  --shadow-soft: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   BODY
+================================ */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.6;
+
+  transition:
+    background 0.4s ease,
+    color 0.3s ease;
+}
+
+/* ===============================
+   APP LAYOUT
+================================ */
+.app main {
+  max-width: var(--max-width);
+  margin: clamp(20px, 4vw, 40px) auto;
+  padding: 0 clamp(16px, 4vw, 20px);
+
+  animation: pageFade 0.6s ease both;
+}
+
+/* ===============================
+   PAGE TRANSITION ANIMATION
+================================ */
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: smooth route changes */
+.page-transition {
+  animation: pageFade 0.5s ease both;
+}
+
+/* ===============================
+   MEDIA RESPONSIVENESS
+================================ */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   FORM & BUTTON CONSISTENCY
+================================ */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ===============================
+   FOCUS STYLES (ACCESSIBLE)
+================================ */
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+/* ===============================
+   LARGE SCREENS
+================================ */
+@media (min-width: 1400px) {
+  .app main {
+    max-width: 1100px;
+  }
+}
+
+/* ===============================
+   SMALL DEVICES
+================================ */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
