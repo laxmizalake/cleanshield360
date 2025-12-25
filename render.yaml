@@ -1,0 +1,22 @@
+services:
+  # Backend Service
+  - type: web
+    name: cleanshield-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+  # Frontend Service
+  - type: web
+    name: cleanshield-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
